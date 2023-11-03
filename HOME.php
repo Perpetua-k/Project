@@ -47,9 +47,9 @@ if(isset($_POST['submit'])){
     </head>
     <body>
         <style>
-    .body{
+        .body{
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -60,6 +60,7 @@ if(isset($_POST['submit'])){
         </style>
     <div class="navbar">
         <div class="logo">
+            <img class="logo" src="Images/logo.jpg">
             <a href="HOME.php"> Travel</a>
         </div>
         <div class="menu">
@@ -85,34 +86,74 @@ if(isset($_POST['submit'])){
             <br>
             <a href="PACKAGES.php">Explore</a>
         </div>
+        <!--image slider starts-->
+            <div class="slider">
+                <div class="slides">
+                    <!--radio button starts-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--radio button end-->
 
-        <div class="tours">
-            <div class="places">
-                <h2>Balloon Safaris</h2>
-                <img src="Images/Mara Triangle.jpg">
-                <br>
-                <br>
-                <p> From the pioneers of ballooning in the Maasai Mara,discover the experience that will stir your soul...something you can't get from a jeep</p>
-            </div>
+                    <!--slide images start-->
+                    
+                    <div class="slide first">
+                    <h2>Balloon Safaris</h2>
+                        <p> From ballooning in the Maasai Mara,discover the experience that will stir your soul...something you can't get from a jeep</p><br>
+                        <img src="Images/Mara Triangle.jpg" alt="">
+                    </div>
 
-            <div class="places">
-                <h2>Great Migration</h2>
-                <img src="Images/Mara River.jpg">
-                <br>
-                <br>
-                <p> A journey for the emotion...for many... a dream of a lifetime by creating memories. It definitely has to be on everyone's Bucket List!</p>
-            </div>
+                    <div class="slide">
+                    <h2>Great Migration</h2>
+                        <p> A journey for the emotion...for many... a dream of a lifetime by creating memories. It definitely has to be on everyone's Bucket List!</p><br>
+                        <img src="Images/Mara River.jpg" alt="">
+                    </div>
 
-            <div class="places">
-                <h2>Game Drives</h2>
-                <img src="Images/drives.jpg">
-                <br>
-                <br>
-                <p> Every dawn is a different adventure, a serene silence travelling in the wild...essentials Africa</p>
+                    <div class="slide">
+                    <h2>Game Drives</h2>
+                        <p> Every dawn is a different adventure, a serene silence travelling in the wild...essentials Africa</p><br>
+                        <img src="Images/drives.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                    <h2>Maasai Culture</h2>
+                        <p> A journey for the emotion...for many... a dream of a lifetime by creating memories. It definitely has to be on everyone's Bucket List!</p><br>
+                        <img src="Images/Maasai Culture.jpg" alt="">
+                    </div>
+                </div>
+                <!--slide images end-->
+                <!--automatic navigation starts-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+                 <!--automatic navigation ends-->
+
             </div>
-        </div>
+            <!--manual navigation starts--> 
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+            <!--manual navigation ends-->  
+        <!--image slider ends-->
+
+        <script type="text/javascript">
+            var counter =1;
+            setInterval(function(){
+                document.getElementById('radio' + counter). checked = true;
+                counter ++;
+                if(counter > 4){
+                    counter = 1;
+                } 
+            },5000);
+            
+        </script>
     </div>
-
     <div class="footer">
         <a href="#">Copyright</a>
         <a href="#">Terms and Conditions</a>
