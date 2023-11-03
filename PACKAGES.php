@@ -96,10 +96,11 @@
             </style>
             </head>
             <body>
-                <div class="navbar">
-                    <div class="logo">
-                        <a href="HOME.php"> Travel</a>
-                    </div>
+            <div class="navbar">
+                <div class="logo">
+                    <img class="logo" src="Images/logo.jpg">
+                    <a href="HOME.php"> Travel</a>
+                </div>
                     <div class="menu">
                         <ul>
                             <li><a href="HOME.php"TARGET="main">HOME</a></li>
@@ -150,7 +151,7 @@
                         </div>
                         <h2>Flight Packages</h2>
                         <p>A typical air package will include internal flights to your destination, accomodation on full board basis, return airstrip transfers in the park, and a minimum of 2 game drives per day.</p>
-                        <img src="Images/Proposal.jpg" style="width: 250px; height: 250px; border-radius: 12px;">
+                        <img src="Images/Travel.jpg" style="width: 250px; height: 250px; border-radius: 12px;">
                         <br>
                         <br>
                         <a href="Book Now.php" class="button">Book Now</a>

@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=montserrat:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="CSS/style.css">
         <style>
+
         .body{
         width: 100%;
         display: flex;
@@ -14,6 +15,13 @@
         align-items: center;
         background-position: center;
         background-size: cover;
+        margin-bottom: 10px;
+        }
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'montserrat';
         }
         .contact{
             position: relative;
@@ -27,13 +35,15 @@
             background-size: cover;
         }
         
+        
         </style>
-        </head>
-        <body>
-            <div class="navbar">
-                <div class="logo">
-                    <a href="HOME.php"> Travel</a>
-                </div>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo">
+                <img class="logo" src="Images/logo.jpg">
+                <a href="HOME.php"> Travel</a>
+            </div>
                 <div class="menu">
                     <ul>
                     <li><a href="HOME.php"TARGET="main">HOME</a></li>
@@ -52,8 +62,9 @@
                     <div class="heading">
                         <h2><b>Contact Us</b><h2>
                             <p>Travel with Kosen Tours</p>
-                        </div>
                     </div>
+                </div>
+                    
                     <div class="container">
                         
                             <div class="contactForm">
@@ -66,6 +77,10 @@
                                     <div class="inputBox">
                                         <input type="text" name="" required="required">
                                         <span>Email</span>
+                                    </div>
+                                    <div class="inputBox">
+                                        <input type="text" name="" required="required">
+                                        <span>Subject</span>
                                     </div>
                                     <div class="inputBox">
                                         <textarea required="required"></textarea>
@@ -101,7 +116,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-             </section>
-        </body>
+            </section>
+        </div>
+    </body>
 </html>

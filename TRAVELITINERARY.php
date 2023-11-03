@@ -13,28 +13,31 @@
             background-size: cover;
             background-position: center;
             }
+            
             </style>
         </head>
         <body>
-            <div class="navbar">
+        <div class="navbar">
                 <div class="logo">
-                    <a href="HOME.html"> Travel</a>
+                    <img class="logo" src="Images/logo.jpg">
+                    <a href="HOME.php"> Travel</a>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="HOME.php"TARGET="main">HOME</a></li>
-                        <li><a href="PACKAGES.php"TARGET="main">PACKAGES</a></li>
-                        <li><a href="TRAVELITINERARY.php"TARGET="main">TRAVEL ITINERARY</a></li>
-                        <li><a href="CONTACT.php"TARGET="main">CONTACT</a></li>
-                        <li><a href="FAQS.php"TARGET="main">FAQS</a></li>
-                    </ul>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="HOME.php"TARGET="main">HOME</a></li>
+                            <li><a href="PACKAGES.php"TARGET="main">PACKAGES</a></li>
+                            <li><a href="TRAVELITINERARY.php"TARGET="main">TRAVEL ITINERARY</a></li>
+                            <li><a href="CONTACT.php"TARGET="main">CONTACT</a></li>
+                            <li><a href="FAQS.php"TARGET="main">FAQS</a></li>
+                        </ul>
+                    </div>
+                    <div class="signup">
+                        <a href="SignUp.php"TARGET="main">Sign Up</a>
+                    </div>
                 </div>
-                <div class="signup">
-                    <a href="SignUp.html"TARGET="main">Sign Up</a>
-                </div>
-            </div>
             
             <div class="booking-form-box">
+                <form action="#" method="post"></form>
                 <div class="radio-btn">
                     <input type="radio" class="btn" name="checkbox" checked="checked"><span>Round-trip</span>
                     <input type="radio" class="btn" name="checkbox"><span>One Way</span>
