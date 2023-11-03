@@ -20,12 +20,12 @@ if(isset($_POST['submit'])){
         if($row['user_type'] == 'admin'){
 
             $_SESSION['admin_name'] = $row['name'];
-            header('location:admin_page.php');
+            header('location:Admin Panel.php');
 
         }elseif($row['user_type'] == 'user'){
 
             $_SESSION['user_name'] = $row['name'];
-            header('location:Book Now.php');
+            header('location:Admin Panel.php');
         }else{
             $error[] = 'incorrect email or password';
         }
@@ -119,9 +119,18 @@ if(isset($_POST['submit'])){
                     </div>
                 </div>
 
-                <select class="drop-down">
-                        <option>Log Out</option>
-                </select>
+                <div class="content">
+                    <a href="LogOut.php" class="btn">LogOut</a>
+                    </div>
+                    
+                    <?php
+            
+            if(isset($error)){
+                foreach($error as $error){
+                    echo '<div class="error-msg">'.$error.'</div>';
+                };
+            };
+        ?>
             </div>
                             
         </header>
