@@ -1,0 +1,636 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style :none;
+    font-family:'montserrat';
+    }
+    .navbar{
+    width: 100%;
+    height: 80px;
+    background:linear-gradient(120deg,#2980b9,#8e4ad4);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    }
+    .logo{
+        width: 50px;
+       display: flex;
+        cursor: pointer;
+        justify-content: space-between;
+    }
+    .logo a{
+        text-decoration: none;
+        font-size: 35px;
+        color: #000;
+        font-weight: 600;
+    }
+    .menu ul{
+    display: flex;
+    align-items: center;
+    }
+    .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 12px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    }
+    .menu ul li a:hover{
+    border-bottom: 4px solid #000;
+    transition: 0.4s;
+    }
+    
+    .signup a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 12px 30px;
+    border: 2px solid #ff0000;
+    }
+    .signup a:hover{
+    background-color: red;
+    transition: 0.6s;
+    }
+
+    .heading{
+    width: 30%;
+    text-align: center;
+    color: #000;
+    }
+    .heading h1{
+    font-size: 30px;
+    }
+    .heading p{
+        font-size: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+    .heading a{
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 45px;
+    padding: 14px 50px;
+    background-color: #fff;
+    }
+    .heading a:hover{
+    letter-spacing: 3px;
+    transition: 0.6s;
+    }
+    
+    .slider{
+        width: 800px;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+        justify-content: space-around;
+        margin: 0 10px;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .slides{
+        width: 500%;
+        height: 500px;
+        display: flex;
+    }
+
+    .slides input{
+        display: none;
+    }
+
+    .slide{
+        width: 20%;
+        transition: 2s;
+        text-align: center;
+        align-items: center;
+    }
+       .slide h2{
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 3px;
+        padding: 0 20px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+    }
+        
+        .slide img{
+            width: 650px;
+            height: 420px;
+            border-radius: .5em;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 0 50px;
+        }
+    
+    
+    /*css for manual slide navigation*/
+
+    .navigation-manual{
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-btn{
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .manual-btn::not(:last-child){
+        margin-right: 40px;
+    }
+
+    .manual-btn:hover{
+        background: #40D3DC;
+    }
+
+    #radio1:checked~ .first{
+        margin-left: 0;
+    }
+    #radio2:checked~ .first{
+        margin-left: -20%;
+    }
+    #radio3:checked~ .first{
+        margin-left: -40%;
+    }
+    #radio4:checked~ .first{
+        margin-left: -60%;
+    }
+
+    /*css for automatic navigaton*/
+    .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        margin-top: 460px;
+    }
+
+    .navigation-auto div{
+        border: 2px solid #40D3DC;
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+    }
+
+    .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+    }
+
+    #radio1:checked ~ .navigation-auto .auto-btn1{
+        background: #40D3DC;
+    }
+    #radio2:checked ~ .navigation-auto .auto-btn2{
+        background: #40D3DC;
+    }
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+        background: #40D3DC;
+    }
+    #radio4:checked ~ .navigation-auto .auto-btn4{
+        background: #40D3DC;
+    }
+    
+    .footer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+    .footer a{
+    text-decoration: none;
+    color: navyblue;
+    font-size: 18px;
+    font-weight: bold;
+    }
+    .footer a:hover{
+    text-decoration:underline;
+    transition:0.4s;
+    }
+    
+    /*signup starts here*/
+    
+            .form-container{
+                width: 360px;
+                height: 90vh;
+                background-color: #ffffff;
+                border-radius: 1em;
+                margin-top: 15px;
+                margin-left: 500px;
+            }
+
+            form{
+                width: 300px;
+                margin-left: 20px;
+            }
+            form h3{
+                text-align: center;
+                padding-top: 20px;
+                text-transform: uppercase;
+            }
+            form p{
+                font-size: 18px;
+            }
+            form .box{
+                margin-top: 20px;
+                font-size: 18px;
+            }
+            form .user_type{
+                margin-top: 20px;
+                font-size: 18px;
+            }
+            form input{
+                width: 100%;
+                height: 35px;
+                padding: 7px;
+                border: none;
+                border: 1px solid gray;
+                border-radius: 6px;
+                outline: none;
+            }
+            input[type="submit"]{
+                width: 100%;
+                height: 35px;
+                margin-top: 20px;
+                border: none;
+                background-color: #49c1b5;
+                color: white;
+                font-size: 18px;
+                cursor: pointer;
+            }
+            p{
+                text-align:center;
+                padding-top: 20px;
+                font-size: 15px;
+            }
+            p a{
+                text-decoration: none;
+                color: cyan;
+                padding: 0 5px;
+            }
+            .error-msg{
+                color: cyan;
+                font-size: 20px;
+                background-color: grey;
+                width: 100%;
+                height: 50px;
+                text-align: center;
+                padding: 15px 0;
+            }
+     /*signup ends here*/
+
+
+    /*book now starts here*/
+            
+                .booking-form-box{
+                max-width: 400px;
+                height: 65vh;
+                border: 1px solid #ced4da;
+                margin: 10% auto 0;
+                }
+                .radio-btn{
+                margin: 0 20px;
+                }
+                .radio-btn .btn{
+                margin: 20px 10px 20px 0;
+                box-shadow: none;
+                }
+                .radio-btn .btn::after{
+                content: '';
+                height: 15px;
+                width: 15px;
+                top: -2px;
+                left: -1px;
+                background-color: #fff;
+                position: relative;
+                display: inline-block;
+                border: 3px solid #fff;
+                visibility: visible;
+                border-radius: 50%;
+                }
+                .radio-btn .btn:checked::after{
+                content: '';
+                background-color: #000;
+                transition: 0.5s;
+                }
+                .radio-btn span{
+                color: #fff;
+                margin-right: 5px;
+                font-size: 12px;
+                }
+                .booking-form{
+                padding: 0 20px 20px;
+                }
+                .booking-form label{
+                margin-bottom: 5px;
+                margin-top: 10px;
+                font-size: 12px;
+                color: #fff;
+                }
+                input::placeholder{
+                color: #fff !important;
+                }
+                .input-grp{
+                width: 151px;
+                display: inline-block;
+                }
+                .form-control{
+                font-size: 12px!important;
+                border-radius: 0!important;
+                color: #fff!important;
+                background: transparent!important;
+                box-shadow: none!important;
+                }
+                .select-date::-webkit-inner-spin-button,
+                .select-date::-webkit-inner-spin-button{
+                -webkit-appearance: none;
+                margin: 0;
+                }
+                .select-date::-webkit-inner-caleder-picker-indicator{
+                background:transparent!important;
+                }
+                .custom-select{
+                color: #fff!important;
+                font-size: 12px!important;
+                border: 1px solid #ced4da!important;
+                box-shadow: none!important;
+                border-radius: 0!important;
+                background: transparent!important;
+                }
+                .custom-select option{
+                color: #333;
+                }
+                .flight{
+                width: 100%;
+                padding: 9px 0!important;
+                font-size: 12px!important;
+                border: 1px solid #ced4da!important;
+                background: transparent!important;
+                box-shadow: none!important;
+                border-radius: 0!important;
+                }
+                .flight:hover{
+                background: #fff!important;
+                color: #000!important;
+                transition: 0.5s;
+                }
+    /*book now ends here*/
+
+
+    /*travel itinerary starts here*/
+                 
+                .travel{
+                    width: 75%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 75px auto;
+                    text-align: center;
+                }
+                .title h1{
+                    text-align: center;
+                }
+                .booking-form-box{
+                    max-width: 400px;
+                    height: 70vh;
+                    border: 1px solid #ced4da;
+                    margin: 10% auto 0;
+                }
+                .radio-btn{
+                    margin: 0 20px;
+                }
+                .radio-btn .btn{
+                    margin: 20px 10px 20px 0;
+                    box-shadow: none;
+                }
+                .radio-btn .btn::after{
+                    content: '';
+                    height: 15px;
+                    width: 15px;
+                    top: -2px;
+                    left: -1px;
+                    background-color: #fff;
+                    position: relative;
+                    display: inline-block;
+                    border: 3px solid #fff;
+                    visibility: visible;
+                    border-radius: 50%;
+                }
+                .radio-btn .btn:checked::after{
+                    content: '';
+                    background-color: #000;
+                    transition: 0.5s;
+                }
+                .radio-btn span{
+                    color: #fff;
+                    margin-right: 5px;
+                    font-size: 12px;
+                }
+                .booking-form{
+                    padding: 0 20px 20px;
+                }
+                .booking-form label{
+                    margin-bottom: 5px;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    color: #fff;
+                }
+                .input::placeholder{
+                    color: #fff !important;
+                }
+                .input-grp{
+                    width: 151px;
+                    display: inline-block;
+                }
+                .input-grp label{
+                    margin-bottom: 5px;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    color: #fff;
+                }
+                .form-control{
+                    font-size: 12px!important;
+                    border-radius: 0!important;
+                    color: #fff!important;
+                    background: transparent!important;
+                    box-shadow: none!important;
+                }
+                .select-date::-webkit-inner-spin-button,
+                .select-date::-webkit-inner-spin-button{
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+                .select-date::-webkit-inner-caleder-picker-indicator{
+                    background:transparent!important;
+                }
+                .custom-select{
+                    color: #fff!important;
+                    font-size: 12px!important;
+                    border: 1px solid #ced4da!important;
+                    box-shadow: none!important;
+                    border-radius: 0!important;
+                    background: transparent!important;
+                }
+                .custom-select option{
+                    color: #333;
+                }
+                .trips{
+                    width: 100%;
+                    padding: 9px 0!important;
+                    font-size: 12px!important;
+                    border: 1px solid #ced4da!important;
+                    background: transparent!important;
+                    box-shadow: none!important;
+                    border-radius: 0!important;
+                }
+                .trips:hover{
+                    background: #fff!important;
+                    color: #000!important;
+                    transition: 0.5s;
+                }
+    /*travel itinerary ends here */
+
+    /*Contact Us begins here */
+          
+                .contact .content{
+                    max-width: 800px;
+                    text-align: center;
+                }
+                .contact .content h2{
+                    font-size: 36px;
+                    font-weight: 500;
+                    color: #000;
+                }
+                .contact .content p{
+                    font-weight: 500;
+                    color: #000;
+                }
+                .container{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 30px;
+                }
+                .container .contactInfo{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                }
+                .container .contactInfo .box{
+                    position: relative;
+                    padding: 20px 0;
+                    display: flex;
+                }
+                .container .contactInfo .box .icon{
+                    min-width: 60px;
+                    height: 60px;
+                    background:#fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    font-size: 22px;
+                }
+                .container .contactInfo .box .text{
+                    display: flex;
+                    margin-left: 20px;
+                    font-size: 16px;
+                    color: #fff;
+                    flex-direction: column;
+                    font-weight: 300;
+                }
+                .container .contactInfo .box .text h3{
+                    font-weight: 500;
+                    color: #00bcd4;
+                }
+                .contactForm{
+                    width: 35%;
+                    padding: 40px;
+                    background: #fff;
+                    justify-content: space-around;
+
+                }
+                .contactForm h2{
+                    font-size: 30px;
+                    color: #333;
+                    font-weight: 500;
+                }
+                .contactForm .inputBox{
+                    position: relative;
+                    width: 100%;
+                    margin-top: 10px;
+                }
+                .contactForm .inputBox input,
+                .contactForm .inputBox textarea{
+                    width: 100%;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    margin: 10px 0;
+                    border: none;
+                    border-bottom: 2px solid #333;
+                    outline: none;
+                    resize: none;
+                }
+                .contactForm .inputBox span{
+                    position: absolute;
+                    left: 0;
+                    padding: 10px 0;
+                    font-size: 16px;
+                    margin: 10px 0;
+                    pointer-events: none;
+                    transition: 0.5s;
+                    color: #666;
+                }
+                .contactForm .inputBox input:focus ~ span,
+                .contactForm .inputBox input:valid ~ span,
+                .contactForm .inputBox textarea:focus ~ span,
+                .contactForm .inputBox textarea:valid ~ span{
+                    color: #e91e63;
+                    font-size: 12px;
+                    transform: translateY(-20px);
+                }
+                .contactForm .inputBox input[type="submit"]{
+                    width: 100px;
+                    background: #00bcd4;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    padding: 10px;
+                    font-size: 18px;
+                }
+                @media (max-width: 991px){
+                    .contact{
+                        padding: 50px;
+                    }
+        
+                    .container{
+                        flex-direction: column;
+                    }
+                    .container .contactInfo{
+                        margin-bottom: 40px;
+                    }
+                    .container .contactInfo,
+                    .contactForm{
+                        width: 100%;
+                    }
+                }
+
+    /*Contact Us ends here */
+                
+
+            
+
+               
